@@ -30,7 +30,7 @@ def forecast_portions(past_attendance, buffer_percent=10):
         raise ValueError("attendance values cannot be negative")
     avg = sum(past_attendance) / len(past_attendance)
     portions = avg * (1 + buffer_percent / 100)
-    return math.ceil(portions)  # round first: 100*1.1 = 110.00000000000001
+    return math.ceil(round(portions, 9))  # round first: 100*1.1 = 110.00000000000001
 
 
 class DiningService:
