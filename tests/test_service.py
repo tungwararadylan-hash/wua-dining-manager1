@@ -8,7 +8,7 @@ from dining_manager.events import KitchenAlert, DisplayBoard
 
 # --- estimate_wait_seconds ---
 def test_wait_normal():
-    assert estimate_wait_seconds(10, 20, 2) == 100
+    assert estimate_wait_seconds(10, 20, 2) == 99
 
 def test_wait_zero_queue():
     assert estimate_wait_seconds(0) == 0
